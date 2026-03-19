@@ -131,14 +131,28 @@ go run ./cmd/server
 
 ## Design system
 
-O frontend usa um sistema de design próprio, sem CSS framework externo.
+O frontend usa um sistema de design próprio, sem CSS framework externo. Suporta **dark mode** via CSS variables e atributo `data-theme="dark"`.
 
-| Token | Valor | Uso |
-|---|---|---|
-| `blue` | `#0F766E` | Cor primária, CTAs (teal) |
-| `green` | `#16A34A` | Sucesso, confirmações |
-| `graphite` | `#1F2937` | Texto principal |
-| `mid` | `#6B7280` | Texto secundário |
+**Paleta principal**
+
+| Token | Light | Dark | Uso |
+|---|---|---|---|
+| `green` | `#16A34A` | — | Cor primária — CTAs, destaques, ações principais |
+| `greenLight` | `#22C55E` | — | Hover / variação do primário |
+| `greenPale` | `#F0FDF4` | `#0E2318` | Fundos com destaque verde |
+| `blue` | `#0F766E` | `#2DD4BF` | Cor secundária (teal) |
+| `bluePale` | `#F0FDFA` | `#134E4A` | Fundos com destaque teal |
+
+**Tokens semânticos**
+
+| Token | Light | Dark | Uso |
+|---|---|---|---|
+| `surface` | `#FFFFFF` | `#1F2937` | Fundo de cards e modais |
+| `pageBg` | `#F8F9FB` | `#111827` | Fundo de página |
+| `graphite` | `#1F2937` | `#F9FAFB` | Texto principal |
+| `mid` | `#6B7280` | `#9CA3AF` | Texto secundário |
+| `border` | `#E5E7EB` | `#374151` | Bordas e divisores |
+| `gray` | `#F3F4F6` | `#1F2937` | Fundos suaves / hover |
 
 Fontes: **Plus Jakarta Sans** (corpo) · **Syne** (títulos)
 Ícones: **Lucide React** — exclusivamente
